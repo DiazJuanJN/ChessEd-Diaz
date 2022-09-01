@@ -1,0 +1,21 @@
+{
+  "name": "chessed-diaz",
+  "version": "1.0.0",
+  "description": "npm del proyecto chessed",
+  "main": "index.html",
+  "scripts": {
+    "build-css": "node-sass --include-path scss sass/styles/main.scss sass/styles/sass-css.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "keywords": [
+    "chessed",
+    "ajedrez",
+    "cursos"
+  ],
+  "author": "Juan Jose Diaz",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.19"
+  }
+}

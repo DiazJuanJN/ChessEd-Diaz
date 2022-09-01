@@ -1,0 +1,32 @@
+@media (max-width: 992px) {
+    .col-contacto-1 {
+        width: 100%;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-filtros {
+        padding-left: 0px;
+        font-size: initial;
+    }
+}
+
+@media (min-width: 992px) {
+    .med-display {
+        display: none;
+    }
+}
+
+@media (max-width: 1199px) {
+    .title-popular-3 {
+        font-size: 1.223499953rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    .col-xxl-9 {
+        flex: 0 0 auto;
+        width: 75%;
+        height: auto;
+    }
+}

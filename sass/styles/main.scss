@@ -1,0 +1,297 @@
+$default-color: #fff;
+$main-color: #f5deb3;
+$hover-color: #ecbf6a;
+$bckg-color: #8a5119;
+$main-font: 'Secular One';
+$border-color: #5c2f04;
+
+body {
+    background-color: $main-color;
+    font-family: $main-font;
+}
+
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
+    height: auto;
+}
+
+.bs-icon {
+    --bs-icon-size: .75rem;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--bs-icon-size);
+    width: calc(var(--bs-icon-size) * 2);
+    height: calc(var(--bs-icon-size) * 2);
+    color: var(--bs-primary);
+    &-xs {
+        --bs-icon-size: 1rem;
+        width: calc(var(--bs-icon-size) * 1.5);
+        height: calc(var(--bs-icon-size) * 1.5);
+    }
+    &-sm {--bs-icon-size: 1rem;}
+    &-md {--bs-icon-size: 1.5rem;}
+    &-lg {--bs-icon-size: 2rem;}
+    &-xl {--bs-icon-size: 2.5rem;}
+    &-primary {
+        color: $bckg-color;
+        background: $main-color;
+    }
+    & &-primary-light {
+        color: var(--bs-primary);
+        background: rgba(var(--bs-primary-rgb), .2);
+    }
+    & &-semi-white {
+        color: var(--bs-primary);
+        background: rgba(255, 255, 255, .5);
+    }
+    &-rounded {border-radius: .5rem;}
+    &-circle {border-radius: 50%;}
+}
+
+.navbar {
+    background-color: $bckg-color;
+    &-light &-nav {
+        .nav-link {
+            color: $main-color;
+            &:focus {color: $hover-color;}
+            &:hover {color: $hover-color}
+            .active {color: $main-color;}
+        }
+    }
+
+    &-light &-nav {.show>.nav-link {color: $main-color;}}
+}
+
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font-family: $main-font;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+.btn-primary {
+    color: $bckg-color;
+    background-color: $main-color;
+    border-color: $bckg-color;
+    &:hover {
+        color: $bckg-color;
+        background-color: $hover-color;
+        border-color: $bckg-color;
+    }
+}
+
+.btn-primary {
+    .active {
+        color: $default-color;
+        background-color: $bckg-color;
+        border-color: $border-color
+    }
+    &:active {
+        color: $default-color;
+        background-color: $bckg-color;
+        border-color: $border-color
+    }
+    .show>&.dropdown-toggle {
+        color: $default-color;
+        background-color: $bckg-color;
+        border-color: $border-color;
+    }
+}
+
+.p-4 {
+    padding: 1rem;
+}
+
+.text-muted {
+    --bs-text-opacity: 1;
+    color: #000000 !important;
+}
+
+ul {
+    a {text-decoration: none;}
+}
+
+.link-light {
+    &:focus {color: $hover-color;}
+    &:hover {color: $hover-color;}
+}
+
+.bg-dark {
+    --bs-bg-opacity: 1;
+    background-color: $bckg-color !important;
+}
+
+.card-pages {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: $default-color;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: .25rem;
+    height: 370px;
+    width: 300px;
+    /*CSS QUE CONTROLA STYLES DE LAS TARJETAS THUMBNAILS*/
+}
+.page-link {
+    position: relative;
+    display: block;
+    color: $bckg-color;
+    text-decoration: none;
+    background-color: $main-color;
+    border: 1px solid $bckg-color;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    &:hover {
+        z-index: 2;
+        color: $bckg-color;
+        background-color: $hover-color;
+        border-color: $bckg-color;
+    }
+}
+
+.pagination-button {
+    background-color: $bckg-color;
+}
+
+.btn-filtros {
+    background-color: $bckg-color;
+    color: $main-color;
+    &:hover {
+        background-color: $hover-color;
+        color: $main-color;
+    }
+}
+
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: .5rem 1rem;
+    text-decoration: none;
+    background-color: $default-color;
+    border: 1px solid rgba(0, 0, 0, .125);
+}
+
+.dropdown-menu.show {
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-menu {
+    position: absolute;
+    z-index: 1000;
+    display: none;
+    min-width: 10rem;
+    padding: .5rem 0;
+    margin: 0;
+    font-size: 1rem;
+    color: #212529;
+    text-align: left;
+    list-style: none;
+    background-color: $default-color;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-radius: .25rem;
+    &[data-bs-popper] {
+        top: 100%;
+        margin-top: .125rem;
+        right: 0;
+        left: 25%;
+    }
+}
+
+.btn-idiomas-mobile {
+    background-color: $default-color;
+    color: #000000;
+    border: solid 2px #000000;
+    &:hover {
+        background-color: var(--bs-gray-500);
+        color: #000000;
+    }
+}
+
+.btn-filtros-mobile {
+    background-color: $bckg-color;
+    color: $main-color;
+    width: 100%;
+}
+
+.btn-check {
+    &:active {
+        color: $default-color;
+        background-color: $bckg-color;
+        border-color: $border-color;
+    }
+    &:checked {
+        color: $default-color;
+        background-color: $bckg-color;
+        border-color: $border-color;
+    }
+}
+
+.prof {
+    &-thumbnail {
+        flex-direction: row;
+        background-color: $default-color;
+        width: 100%;
+        height: 270px;
+    }
+    &-img {
+        width: 40% !important;
+    }
+    &-card-body {
+        width: 60%;
+    }
+}
+
+.col-contacto-1 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.input-contacto {
+    border: solid 2px $hover-color;
+    border-radius: 5px;
+}
+
+.drop-contacto {
+    width: 100%;
+    left: 0 !important;
+    right: 0 !important;
+}
+
+.label-contacto {
+    margin: .5rem 0 0 0;
+}
+
+.img-contacto {
+    width: 100%;
+}
+
+.col-img-contacto {
+    align-items: center;
+    display: flex;
+}
+
+.iframes-div {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.fit-cover {
+    object-fit: cover;
+}
+
+@import "variables/media queries/medium";
+@import "variables/media queries/large";
+@import "variables/media queries/extralarge";
