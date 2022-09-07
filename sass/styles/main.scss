@@ -1,3 +1,4 @@
+$main-font: 'Secular One';
 $colores: (
     default-color: #fff,
     main-color: #f5deb3,
@@ -5,8 +6,21 @@ $colores: (
     bckg-color: #8a5119,
     border-color: #5c2f04,
 );
-$main-font: 'Secular One';
-
+@mixin btn-type-1 {
+    color: map-get($colores, bckg-color);
+    background-color: map-get($colores, main-color);
+    border-color: map-get($colores, bckg-color);
+}
+@mixin btn-type-2 {
+    color: map-get($colores, default-color);
+    background-color: map-get($colores, bckg-color);
+    border-color: map-get($colores, border-color);
+}
+@mixin btn-hover-1 {
+    color: map-get($colores, bckg-color);
+    background-color: map-get($colores, hover-color);
+    border-color: map-get($colores, bckg-color);
+}
 
 body {
     background-color: map-get($colores, main-color);
@@ -81,31 +95,21 @@ button, input, optgroup, select, textarea {
 }
 
 .btn-primary {
-    color: map-get($colores, bckg-color);
-    background-color: map-get($colores, main-color);
-    border-color: map-get($colores, bckg-color);
+    @include btn-type-1;
     &:hover {
-        color: map-get($colores, bckg-color);
-        background-color: map-get($colores, hover-color);
-        border-color: map-get($colores, bckg-color);
+        @include btn-hover-1;
     }
 }
 
 .btn-primary {
     .active {
-        color: map-get($colores, default-color);
-        background-color: map-get($colores, bckg-color);
-        border-color: map-get($colores, border-color);
+        @include btn-type-2;
     }
     &:active {
-        color: map-get($colores, default-color);
-        background-color: map-get($colores, bckg-color);
-        border-color: map-get($colores, border-color)
+        @include btn-type-2;
     }
     .show>&.dropdown-toggle {
-        color: map-get($colores, default-color);
-        background-color: map-get($colores, bckg-color);
-        border-color: map-get($colores, border-color);
+        @include btn-type-2()
     }
 }
 
@@ -230,14 +234,10 @@ ul {
 
 .btn-check {
     &:active {
-        color: map-get($colores, default-color);
-        background-color: map-get($colores, bckg-color);
-        border-color: map-get($colores, border-color);
+        @include btn-type-2;
     }
     &:checked {
-        color: map-get($colores, default-color);
-        background-color: map-get($colores, bckg-color);
-        border-color: map-get($colores, border-color);
+        @include btn-type-2;
     }
 }
 
