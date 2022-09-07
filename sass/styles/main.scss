@@ -109,7 +109,7 @@ button, input, optgroup, select, textarea {
         @include btn-type-2;
     }
     .show>&.dropdown-toggle {
-        @include btn-type-2()
+        @include btn-type-2;
     }
 }
 
@@ -160,9 +160,7 @@ ul {
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
     &:hover {
         z-index: 2;
-        color: map-get($colores, bckg-color);
-        background-color: map-get($colores, hover-color);
-        border-color: map-get($colores, bckg-color);
+        @include btn-hover-1;
     }
 }
 
