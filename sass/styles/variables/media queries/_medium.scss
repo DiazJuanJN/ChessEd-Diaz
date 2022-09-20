@@ -8,44 +8,30 @@
     .col-filtros {
         display: none;
     }
-}
-
-@media (max-width: 768px) {
+    .last-card {
+        display: flex;
+    }
+    .card-pages {
+        margin: 10px 0px 10px 0px;
+    }
     .col-thumbnail {
         flex-direction: column;
         align-items: center;
-        padding: 10px;
     }
-}
-
-@media (max-width: 768px) {
     .col-last {
         display: none !important;
     }
-}
-
-@media (max-width: 768px) {
     .thumbnail {
         margin-top: 10px;
         margin: 10px;
     }
-}
-
-@media (max-width: 768px) {
     .page-title {
         text-align: center;
         padding: 20px;
     }
-}
-
-
-@media (max-width: 768px) {
     .text-prof {
         display: none;
     }
-}
-
-@media (max-width: 768px) {
     .btn-prof-div {
         display: flex;
         flex-direction: column;
@@ -53,5 +39,4 @@
         justify-content: center;
     }
 }
-
 

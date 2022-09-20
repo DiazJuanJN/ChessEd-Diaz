@@ -151,10 +151,6 @@ ul {
     /*CSS QUE CONTROLA STYLES DE LAS TARJETAS THUMBNAILS*/
 }
 
-.shop-text {
-    font-size: 1vw;
-}
-
 .page-link {
     position: relative;
     display: block;
@@ -259,10 +255,6 @@ ul {
     }
 }
 
-.col-thumbnail{
-    padding: 10px;
-}
-
 .col-contacto-1 {
     display: flex;
     flex-direction: column;
@@ -302,7 +294,7 @@ ul {
     object-fit: cover;
 }
 
-@import "variables/media queries/small";
-@import "variables/media queries/medium";
-@import "variables/media queries/large";
 @import "variables/media queries/extralarge";
+@import "variables/media queries/large";
+@import "variables/media queries/medium";
+@import "variables/media queries/small";
