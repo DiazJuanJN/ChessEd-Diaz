@@ -125,6 +125,9 @@ ul a {
   width: 300px;
   /*CSS QUE CONTROLA STYLES DE LAS TARJETAS THUMBNAILS*/ }
 
+.shop-text {
+  font-size: 1vw; }
+
 .page-link {
   position: relative;
   display: block;
