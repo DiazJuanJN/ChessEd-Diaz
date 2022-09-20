@@ -1,0 +1,11 @@
+@media (max-width: 500px) {
+    .prof-thumbnail {
+        flex-direction: column;
+    }
+    .prof-img {
+        width: auto !important;
+    }
+    .prof-card-body {
+        width: auto;
+    }
+}

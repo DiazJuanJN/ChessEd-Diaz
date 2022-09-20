@@ -146,7 +146,7 @@ ul {
     background-clip: border-box;
     border: 1px solid rgba(0, 0, 0, .125);
     border-radius: .25rem;
-    height: 370px;
+    height: auto;
     width: 300px;
     /*CSS QUE CONTROLA STYLES DE LAS TARJETAS THUMBNAILS*/
 }
@@ -244,14 +244,18 @@ ul {
         flex-direction: row;
         background-color: map-get($colores, default-color);
         width: 100%;
-        height: 270px;
+        height: auto;
     }
     &-img {
-        width: 40% !important;
+        width: 30% !important;
     }
     &-card-body {
         width: 60%;
     }
+}
+
+.col-thumbnail{
+    padding: 10px;
 }
 
 .col-contacto-1 {
@@ -293,6 +297,7 @@ ul {
     object-fit: cover;
 }
 
+@import "variables/media queries/small";
 @import "variables/media queries/medium";
 @import "variables/media queries/large";
 @import "variables/media queries/extralarge";
