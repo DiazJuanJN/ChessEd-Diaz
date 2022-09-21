@@ -294,6 +294,23 @@ ul {
     object-fit: cover;
 }
 
+.icon404 {
+    font-size: 10rem;
+    color: map-get($colores, bckg-color);
+}
+
+.header404 {
+    font-family: 'Yeseva One';
+    font-size: 70px;
+}
+
+.main404 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 0px 60px 0px;
+}  
+
 @import "variables/media queries/extralarge";
 @import "variables/media queries/large";
 @import "variables/media queries/medium";
